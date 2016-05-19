@@ -1,2 +1,6 @@
-# proj_film
-Symulacja filmowej superprodukcji
+# Poznar Józef
+##Symulacja filmowej superprodukcji
+
+Program opiera się na porównywaniu kilku losowych obiektów klasy **film** i wybraniu z nich "najlepszego", na podstawie określonych parametrów. Będą one pobierane ze zdefiniowanych wcześniej obiektów klasy **director**, **actor** i **genre**, oraz zmiennej losowej _budget_. Sukces może być mierzony przez oceny widowni `rating` i ilośc zarobionych pieniędzy `box_office`. Porównywanie odbywać się będzie w cyklach, zwanych dalej tygodniami, w których to zostanie obliczony wynik "sukcesu" dla każdego filmu. Po upływie 52 tygodni nastąpi tzw. podsumowanie - funkcja wypisze filmy  z najlepszymi wynikami a także stworzy listę obiektów pozostałych klas, które na ten sukces się przyczyniły (reżyser z największą ilość sukcesów, aktorzy którzy zarobili najwięcej pieniędzy, gatunek który był najczęściej kręcony). Współczynniki i parametry wpływające na losowość symulacji zostaną wtedy zaktualizowane z zachowaniem tendencji (tj. reżyser który nakręcił więcej kasowych filmów, otrzyma parametr zwiększający prawdopodobieństwo ponownych sukcesów).
+
+Celem symulacji jest rozstrzygnięcie który obiekt klasy **film** odniósł największy sukces i które obiekty pozostałych klasy odnotowały największy przyrost parametrów w trakcie trwania całej symulacji. Trwanie symulacji zaplanowane jest na 1040 programowych tygodni.
