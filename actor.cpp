@@ -7,17 +7,17 @@ vector <string> Act::lastName;
 
 void Act::init()
 {
-	ifstream file("firstActorName.dat");
-	copy(istream_iterator<string>(file),
+	ifstream file1("firstActorName.dat");
+	copy(istream_iterator<string>(file1),
 		 istream_iterator<string>(),
 		 back_inserter(firstName));
-	file.close();
+	file1.close();
 
-	ifstream file("lastActorName.dat");
-	copy(istream_iterator<string>(file),
+	ifstream file2("lastActorName.dat");
+	copy(istream_iterator<string>(file2),
 		 istream_iterator<string>(),
 		 back_inserter(lastName));
-	file.close();
+	file2.close();
 }
 
 Act::Act()

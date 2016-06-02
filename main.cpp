@@ -4,6 +4,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <time.h>
+#include <iterator>
 #include <unistd.h>
 #include <stdlib.h>
 #include <vector>
@@ -11,14 +12,15 @@
 #define AMOUNT_OF_DIRECTORS 20
 #define AMOUNF_OF_ACTORS 120
 
-Dir poolOfDirectors[AMOUNT_OF_DIRECTORS];
-Act poolOfActors[AMOUNF_OF_ACTORS];
+Dir poolOfDirectors(AMOUNT_OF_DIRECTORS);
+Act poolOfActors(AMOUNF_OF_ACTORS);
 
 Film filmVector[104];
 Film filmWeeklyWinner[52];
 
 void fiftyTwoWeeks()
 {
+	/*
 	int k = 0;
 	while(k < 52)		//symulacja 52 tygodni
 		{
@@ -33,19 +35,20 @@ void fiftyTwoWeeks()
 			k++;
 		 
 		}
+		*/
 }
 
 
-int main (int argc, char constant argv[])
+int main (int argc, char const *argv[])
 {
-	vector < film > filmVector;
-	vector < film > filmWeeklyWinner;
+/*
 
 while(1)
 {
 		int k = 0;
 		
 }
-	srand(argc == )
-}
+
+*/
+
 }

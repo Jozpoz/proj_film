@@ -12,23 +12,23 @@ vector < Act > Film::cast;
 
 void Film::init()
 {
-	ifstream file("firstNamePart.dat");
-	copy(istream_iterator<string>(file),
+	ifstream file1("firstNamePart.dat");
+	copy(istream_iterator<string>(file1),
 		 istream_iterator<string>(),
 		 back_inserter(firstPart));
-	file.close();
+	file1.close();
 
-	ifstream file("secondNamePart.dat");
-	copy(istream_iterator<string>(file),
+	ifstream file2("secondNamePart.dat");
+	copy(istream_iterator<string>(file2),
 		 istream_iterator<string>(),
 		 back_inserter(middlePart));
-	file.close();
+	file2.close();
 
-	ifstream file("thirdNamePart.dat");
-	copy(istream_iterator<string>(file),
+	ifstream file3("thirdNamePart.dat");
+	copy(istream_iterator<string>(file3),
 		 istream_iterator<string>(),
 		 back_inserter(lastPart));
-	file.close();
+	file3.close();
 }
 
 
@@ -44,34 +44,33 @@ string Film::name(string first, string middle, string last)
 
 void Film::cast()
 {
-	act cast[6];
-	for (int i = 0, i < 6, i++)
-		cast[i] = poolOfActors[rand() % AMOUNT_OF_ACTORS];
-	return 0;
+	Act cast[6];
+	for (int i = 0; i < 6; i++)
+		cast[i] = poolOfActors(rand() % AMOUNT_OF_ACTORS);
 }
 
 double Film::box_office()
 {
-	return 100000000 * (cast[0].actFactor() +
-					    cast[1].actFactor() +
-					    cast[2].actFactor() +
-					    cast[3].actFactor() +
-						cast[4].actFactor() +
-					    cast[5].actFactor() +) * 10 + 0.1*_director.dirMultiplier())
+	return 100000000 * (cast[0].actFactor(); +
+					    cast[1].actFactor(); +
+					    cast[2].actFactor(); +
+					    cast[3].actFactor(); +
+						cast[4].actFactor(); +
+					    cast[5].actFactor(); +) * 10 + 0.1*_director.dirMultiplier();)
 }
 
 double Film::rating()
 {
-	return 5.0 + (_director.dirMultiplier() * (cast[0].actFactor() +
-											   cast[1].actFactor() +
-											   cast[2].actFactor() +
-											   cast[3].actFactor() +
-											   cast[4].actFactor() +
-											   cast[5].actFactor() +))
+	return 5.0 + (_director.dirMultiplier(); * (cast[0].actFactor(); +
+											   cast[1].actFactor(); +
+											   cast[2].actFactor(); +
+											   cast[3].actFactor(); +
+											   cast[4].actFactor(); +
+											   cast[5].actFactor(); +))
 }
 
 
-Film::film()
+Film::Film()
 {
 	static int amountOfFirstParts = (init(), firstPart.size());
 	static int amountOfMiddleParts = (init(), middlePart.size());

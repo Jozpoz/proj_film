@@ -1,13 +1,16 @@
+#pragma once
+
 #include <string>
 #include <vector>
+#include <iterator>
 
 using namespace std;
-
 
 class Act
 {
 	static vector <string> firstName;
 	static vector <string> lastName;
+
 	static void init();
 
 	string _name, _firstName, _lastName;

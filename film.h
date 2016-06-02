@@ -1,5 +1,8 @@
+#pragma once
+
 #include "actor.h"
 #include "director.h"
+#include <iterator>
 #include <string>
 #include <vector>
 
@@ -14,15 +17,20 @@ struct ratio
 
 class Film
 {
-	static vector <string> Film::firstPart;
-	static vector <string> Film::middlePart;
-	static vector <string> Film::lastPart;
-	static vector < Act > Film::cast;
+	static vector <string> firstPart;  //film:: przed firstPart
+	static vector <string> middlePart;
+	static vector <string> lastPart;
+	static vector < Act > cast;
 
+	void cast();
+	double box_office();
+	double rating();
+
+	string name();
 	string _title;
 	string _genre;
 	Dir _director;
-	vector <Act> cast;
+	// vector <Act> cast;
 	int _budget;
 	double _box_office, _rating;
 
@@ -40,7 +48,7 @@ public:
 				 		cast[4] + ", " + 
 				 		cast[5] + ", "; }
 	// string genre() { return _genre; }
-	int budget() {return _budget; }
-	double box_office() { return _box_office; }
-	double rating() { return _rating; }
+	int budget() { return _budget; }
+	//double box_office() { return _box_office; }
+	//double rating() { return _rating; }
 };
