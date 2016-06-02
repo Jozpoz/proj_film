@@ -3,20 +3,16 @@
 
 using namespace std;
 
-struct ratio
-{
-	double box_office, rating;
-};
-
 class Dir
 {
-	static vector <string> names;
+	static vector <string> name;
+	static void init();
 
-	string name;
+	string _firstName, _lastName;
 	int _age;
 	int _amountOfFilms;
-	double _dirMultiplier
-	ratio globalBox_Office, globalRating;
+	double _dirMultiplier;
+	double globalBox_Office, globalRating;
 
 public:
 	Dir();
@@ -25,6 +21,6 @@ public:
 	int age() { return _age; }
 	int amountOfFilms() { return _amountOfFilms; }
 	double dirMultiplier() { return _dirMultiplier; }
-	ratio box_office() { return globalBox_Office; }
-	ratio rating() { return globalRating; }
+	double box_office() { return globalBox_Office; }
+	double rating() { return globalRating; }
 };

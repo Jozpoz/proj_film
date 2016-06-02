@@ -22,14 +22,14 @@ void Act::init()
 
 Act::Act()
 {
-	static int amountOfFirstNames = (init(), firstName.size());
-	static int amountOfLastNames = (init(), lastName.size());
+	/*static */ int amountOfFirstNames = (init(), firstName.size());
+	int amountOfLastNames = (init(), lastName.size());
 
 	_firstName = firstName[rand() % amountOfFirstNames];
 	_lastName = lastName[rand() % amountOfLastNames];
 	_age = 6 + rand() % 85;										//wiek aktora z zakresu 21-49 na początku symulacji
 	_amountOfFilms = 0; 
 	_actFactor = 1; 											//każdy aktor zaczyna z zerowym dorobkiem i jednostkowym współczynnikiem
-	globalBoxOffice = 0;
+	globalBox_Office = 0;
 	globalRating = 0;
 }

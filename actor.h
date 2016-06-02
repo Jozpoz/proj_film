@@ -3,19 +3,18 @@
 
 using namespace std;
 
-struct ratio
-{
-	double box_office, rating;
-};
 
 class Act
 {
-	static vector <string> names;
+	static vector <string> firstName;
+	static vector <string> lastName;
+	static void init();
 
-	string _name;
-	int age;
-	int amountOfFilms;
-	ratio globalBox_Office, globalRating;
+	string _name, _firstName, _lastName;
+	int _age;
+	int _amountOfFilms;
+	double _actFactor;
+	double globalBox_Office, globalRating;
 
 public:
 	Act();
@@ -24,6 +23,6 @@ public:
 	int age() { return _age; }
 	int amountOfFilms() { return _amountOfFilms; }
 	double actFactor() { return _actFactor; }
-	ratio box_office() { return globalBox_Office; }
-	ratio rating() { return globalRating; }
+	double box_office() { return globalBox_Office; }
+	double rating() { return globalRating; }
 };

@@ -17,7 +17,7 @@ Act poolOfActors[AMOUNF_OF_ACTORS];
 Film filmVector[104];
 Film filmWeeklyWinner[52];
 
-void fiftyTwoWeeks();
+void fiftyTwoWeeks()
 {
 	int k = 0;
 	while(k < 52)		//symulacja 52 tygodni

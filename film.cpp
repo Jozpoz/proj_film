@@ -47,6 +47,7 @@ void Film::cast()
 	act cast[6];
 	for (int i = 0, i < 6, i++)
 		cast[i] = poolOfActors[rand() % AMOUNT_OF_ACTORS];
+	return 0;
 }
 
 double Film::box_office()

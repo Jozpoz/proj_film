@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <fstream>
 
-vector <string> Dir::firstName;
-vector <string> Dir::lastName;
+static vector <string> Dir::firstName;
+static vector <string> Dir::lastName;
 
 void Dir::init()
 {
@@ -30,6 +30,6 @@ Dir::Dir()
 	_age = 21 + rand() % 49;										//wiek reżysera z zakresu 21-49 na początku symulacji
 	_amountOfFilms = 0; 
 	_dirMultiplier = 1; 											//każdy reżyser zaczyna z zerowym dorobkiem i jednostkowym współczynnikiem
-	globalBoxOffice = 0;
+	globalBox_Office = 0;
 	globalRating = 0;
 }
