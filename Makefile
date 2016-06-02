@@ -1,3 +1,2 @@
 all:
-	g++ *.cpp -std=c++0x -o main
-	./main 4
+	g++ main.cpp director.cpp actor.cpp film.cpp -std=c++0x -o main

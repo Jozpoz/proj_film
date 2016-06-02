@@ -1,16 +1,17 @@
 #include "director.h"
 #include "actor.h"
 #include "film.h"
-#include <iostream>
-#include <stdio.h>
-#include <time.h>
-#include <iterator>
-#include <unistd.h>
-#include <stdlib.h>
-#include <vector>
+//#include <iostream>
+//#include <stdio.h>
+//#include <time.h>
+//#include <iterator>
+//#include <unistd.h>
+//#include <stdlib.h>
+//#include <vector>
 
 #define AMOUNT_OF_DIRECTORS 20
-#define AMOUNF_OF_ACTORS 120
+#define AMOUNT_OF_ACTORS 120
+/*
 
 Dir poolOfDirectors(AMOUNT_OF_DIRECTORS);
 Act poolOfActors(AMOUNF_OF_ACTORS);
@@ -20,7 +21,6 @@ Film filmWeeklyWinner[52];
 
 void fiftyTwoWeeks()
 {
-	/*
 	int k = 0;
 	while(k < 52)		//symulacja 52 tygodni
 		{
@@ -35,12 +35,16 @@ void fiftyTwoWeeks()
 			k++;
 		 
 		}
-		*/
 }
-
+*/
 
 int main (int argc, char const *argv[])
 {
+	Director poolOfDirectors[AMOUNT_OF_DIRECTORS];
+	Act poolOfActors[AMOUNT_OF_ACTORS];
+
+	Film::assignCast(/* *poolOfActor */);
+
 /*
 
 while(1)

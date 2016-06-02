@@ -8,7 +8,11 @@ vector <string> Film::firstPart;
 vector <string> Film::middlePart;
 vector <string> Film::lastPart;
 
-vector < Act > Film::cast;
+// vector < Act > Film::cast;
+
+#pragma mark -
+#pragma mark Helpers
+#pragma mark -
 
 void Film::init()
 {
@@ -31,7 +35,7 @@ void Film::init()
 	file3.close();
 }
 
-
+/*
 string Film::name(string first, string middle, string last)
 {	
 	const int random = (rand() % 100);
@@ -40,13 +44,38 @@ string Film::name(string first, string middle, string last)
 	else if(random = 50) return first + " " + middle + " " + last;
 	else return middle;
 }
+*/
 
 
-void Film::cast()
+#pragma mark -
+#pragma mark Constructors
+#pragma mark -
+
+Film::Film()
+{
+	/*
+	static int amountOfFirstParts = (init(), firstPart.size());
+	static int amountOfMiddleParts = (init(), middlePart.size());
+	static int amountOfLastParts = (init(), lastPart.size());
+
+	_title = Film::name(firstPart[rand() % amountOfFirstParts],
+						middlePart[rand() % amountOfMiddleParts], 
+						lastPart[rand() % amountOfLastParts]);
+	
+	_director = poolOfDirectors[rand() % AMOUNT_OF_DIRECTORS];
+	_box_office = Film::box_office();
+	_rating = Film::rating();*/
+}
+
+/*
+
+
+
+void Film::assignCast()
 {
 	Act cast[6];
 	for (int i = 0; i < 6; i++)
-		cast[i] = poolOfActors(rand() % AMOUNT_OF_ACTORS);
+		cast[i] = poolOfActors[rand() % AMOUNT_OF_ACTORS];
 }
 
 double Film::box_office()
@@ -70,17 +99,5 @@ double Film::rating()
 }
 
 
-Film::Film()
-{
-	static int amountOfFirstParts = (init(), firstPart.size());
-	static int amountOfMiddleParts = (init(), middlePart.size());
-	static int amountOfLastParts = (init(), lastPart.size());
 
-	_title = Film::name(firstPart[rand() % amountOfFirstParts],
-						middlePart[rand() % amountOfMiddleParts], 
-						lastPart[rand() % amountOfLastParts]);
-	
-	_director = poolOfDirectors[rand() % AMOUNT_OF_DIRECTORS];
-	_box_office = Film::box_office();
-	_rating = Film::rating();
-}
+*/

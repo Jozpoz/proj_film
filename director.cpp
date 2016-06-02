@@ -2,28 +2,29 @@
 #include <stdlib.h>
 #include <fstream>
 
-vector <string> Dir::firstName;
-vector <string> Dir::lastName;
+vector <string> Director::firstNames;
+vector <string> Director::lastNames;
 
-void Dir::init()
+
+void Director::init()
 {
 	ifstream file1("firstDirectorName.dat");
 	copy(istream_iterator<string>(file1),
 		 istream_iterator<string>(),
-		 back_inserter(firstName));
+		 back_inserter(firstNames));
 	file1.close();
 
 	ifstream file2("lastDirectorName.dat");
 	copy(istream_iterator<string>(file2),
 		 istream_iterator<string>(),
-		 back_inserter(lastName));
+		 back_inserter(lastNames));
 	file2.close();
 }
 
-Dir::Dir()
+Director::Director()
 {
-	 int amountOfFirstNames = (init(), firstName.size());
-	 int amountOfLastNames = (init(), lastName.size());
+	static int amountOfFirstNames = (init(), firstNames.size());
+	static int amountOfLastNames = (init(), lastNames.size());
 
 	firstName = firstName[rand() % amountOfFirstNames];
 	lastName = lastName[rand() % amountOfLastNames];

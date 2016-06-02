@@ -8,37 +8,37 @@
 
 using namespace std;
 
-/* 
-struct ratio
-{
-	double box_office, rating;
-}; 
-*/
-
 class Film
 {
-	static vector <string> firstPart;  //film:: przed firstPart
+	static vector <string> firstPart;
 	static vector <string> middlePart;
 	static vector <string> lastPart;
-	static vector < Act > cast;
+	//static vector <Act> cast;
 
+	static Act* cast;
+
+	static void init();
+
+
+	string _title;
+	Director _director;
+	double _box_office, _rating;
+
+	/*
 	void cast();
 	double box_office();
 	double rating();
 
 	string name();
-	string _title;
 	string _genre;
-	Dir _director;
 	// vector <Act> cast;
 	int _budget;
-	double _box_office, _rating;
 
-	static void init();
-
+*/
 public:
+	static void assignCast(/*Act *pool*/) { /* poolOfActors = pool; */ }
 	Film();
-
+/*
 	string title() { return _title; }
 	virtual Dir director() { return _director; }
 	virtual Act cast() { return cast[0] + ", " + 
@@ -51,4 +51,5 @@ public:
 	int budget() { return _budget; }
 	//double box_office() { return _box_office; }
 	//double rating() { return _rating; }
+	*/
 };

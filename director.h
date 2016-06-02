@@ -6,10 +6,10 @@
 
 using namespace std;
 
-class Dir
+class Director
 {
-	static vector <string> firstName;
-	static vector <string> lastName;
+	static vector <string> firstNames;
+	static vector <string> lastNames;
 	static void init();
 
 	string firstName, lastName;
@@ -19,7 +19,7 @@ class Dir
 	double globalBox_Office, globalRating;
 
 public:
-	Dir();
+	Director();
 
 	string name() { return firstName + " " + lastName; }
 	int age() { return _age; }
