@@ -77,12 +77,13 @@ void Film::assignCast(Actor *poolOfActors)
 
 double Film::box_office()
 {
+	return 0;/*
 	return 100000000 * (cast[0].actFactor() +
 					    cast[1].actFactor() +
 					    cast[2].actFactor() +
 					    cast[3].actFactor() +
 						cast[4].actFactor() +
-					    cast[5].actFactor() ) * (10 + 0.1*_director.dirMultiplier());
+					    cast[5].actFactor() ) * (10 + 0.1*_director.dirMultiplier());*/
 }
 /*
 double Film::rating()

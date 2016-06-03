@@ -43,6 +43,6 @@ int main (int argc, char const *argv[])
 	Director poolOfDirectors[AMOUNT_OF_DIRECTORS];
 	Actor poolOfActors[AMOUNT_OF_ACTORS];
 
-	// Film::assignCast( *poolOfActor );
+	Film::assignCast( &poolOfActors );
 
 }
