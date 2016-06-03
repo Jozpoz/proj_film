@@ -13,43 +13,45 @@ class Film
 	static vector <string> firstPart;
 	static vector <string> middlePart;
 	static vector <string> lastPart;
-	//static vector <Act> cast;
+	static vector <Actor*> cast;
 
-	static Act* cast;
+	//static Actor* cast;
 
 	static void init();
+	static string name(string first, string middle, string last);
 
 
 	string _title;
 	Director _director;
 	double _box_office, _rating;
 
-	/*
-	void cast();
+	
 	double box_office();
 	double rating();
-
+/*
 	string name();
 	string _genre;
-	// vector <Act> cast;
+	// vector <Actor> cast;
 	int _budget;
 
 */
 public:
-	static void assignCast(/*Act *pool*/) { /* poolOfActors = pool; */ }
+	static void assignCast(Actor *poolOfActors); // { *Actor poolOfActors = pool; }
+
 	Film();
-/*
+
 	string title() { return _title; }
-	virtual Dir director() { return _director; }
-	virtual Act cast() { return cast[0] + ", " + 
-				 		cast[1] + ", " + 
-				 		cast[2] + ", " + 
-				 		cast[3] + ", " + 
-				 		cast[4] + ", " + 
-				 		cast[5] + ", "; }
+
+	//virtual Director director() { return _director; }
+	//virtual Actor cast() { return cast[0] + ", " + 
+	//			 		cast[1] + ", " + 
+	//			 		cast[2] + ", " + 
+	//			 		cast[3] + ", " + 
+	//			 		cast[4] + ", " + 
+	//			 		cast[5] + ", "; }
 	// string genre() { return _genre; }
-	int budget() { return _budget; }
+	// int budget() { return _budget; }
 	//double box_office() { return _box_office; }
 	//double rating() { return _rating; }
-	*/
+	
 };

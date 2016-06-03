@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <fstream>
 
-vector <string> Act::firstName;
-vector <string> Act::lastName;
+vector <string> Actor::firstName;
+vector <string> Actor::lastName;
 
-void Act::init()
+void Actor::init()
 {
 	ifstream file1("firstActorName.dat");
 	copy(istream_iterator<string>(file1),
@@ -20,9 +20,9 @@ void Act::init()
 	file2.close();
 }
 
-Act::Act()
+Actor::Actor()
 {
-	/*static */ int amountOfFirstNames = (init(), firstName.size());
+	int amountOfFirstNames = (init(), firstName.size());
 	int amountOfLastNames = (init(), lastName.size());
 
 	_firstName = firstName[rand() % amountOfFirstNames];

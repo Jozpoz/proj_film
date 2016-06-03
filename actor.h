@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Act
+class Actor
 {
 	static vector <string> firstName;
 	static vector <string> lastName;
@@ -20,7 +20,7 @@ class Act
 	double globalBox_Office, globalRating;
 
 public:
-	Act();
+	Actor();
 
 	string name() { return _firstName + " " + _lastName; }
 	int age() { return _age; }

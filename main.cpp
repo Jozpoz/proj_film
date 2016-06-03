@@ -11,7 +11,7 @@
 
 #define AMOUNT_OF_DIRECTORS 20
 #define AMOUNT_OF_ACTORS 120
-/*
+/* 
 
 Dir poolOfDirectors(AMOUNT_OF_DIRECTORS);
 Act poolOfActors(AMOUNF_OF_ACTORS);
@@ -41,18 +41,8 @@ void fiftyTwoWeeks()
 int main (int argc, char const *argv[])
 {
 	Director poolOfDirectors[AMOUNT_OF_DIRECTORS];
-	Act poolOfActors[AMOUNT_OF_ACTORS];
+	Actor poolOfActors[AMOUNT_OF_ACTORS];
 
-	Film::assignCast(/* *poolOfActor */);
-
-/*
-
-while(1)
-{
-		int k = 0;
-		
-}
-
-*/
+	// Film::assignCast( *poolOfActor );
 
 }

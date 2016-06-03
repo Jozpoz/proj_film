@@ -28,9 +28,9 @@ Director::Director()
 
 	firstName = firstName[rand() % amountOfFirstNames];
 	lastName = lastName[rand() % amountOfLastNames];
-	_age = 21 + rand() % 49;										//wiek reżysera z zakresu 21-49 na początku symulacji
+	_age = 21 + rand() % 49;
 	_amountOfFilms = 0; 
-	_dirMultiplier = 1; 											//każdy reżyser zaczyna z zerowym dorobkiem i jednostkowym współczynnikiem
+	_dirMultiplier = 1;
 	globalBox_Office = 0;
 	globalRating = 0;
 }

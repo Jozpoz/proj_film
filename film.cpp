@@ -8,7 +8,7 @@ vector <string> Film::firstPart;
 vector <string> Film::middlePart;
 vector <string> Film::lastPart;
 
-// vector < Act > Film::cast;
+vector < Actor* > Film::cast;
 
 #pragma mark -
 #pragma mark Helpers
@@ -35,16 +35,15 @@ void Film::init()
 	file3.close();
 }
 
-/*
+
 string Film::name(string first, string middle, string last)
 {	
 	const int random = (rand() % 100);
 	if(random < 25) return first + " " + middle;
 	else if(random > 75) return middle + " " + last;
-	else if(random = 50) return first + " " + middle + " " + last;
+	else if(random == 50) return first + " " + middle + " " + last;
 	else return middle;
 }
-*/
 
 
 #pragma mark -
@@ -53,7 +52,7 @@ string Film::name(string first, string middle, string last)
 
 Film::Film()
 {
-	/*
+	
 	static int amountOfFirstParts = (init(), firstPart.size());
 	static int amountOfMiddleParts = (init(), middlePart.size());
 	static int amountOfLastParts = (init(), lastPart.size());
@@ -62,40 +61,38 @@ Film::Film()
 						middlePart[rand() % amountOfMiddleParts], 
 						lastPart[rand() % amountOfLastParts]);
 	
-	_director = poolOfDirectors[rand() % AMOUNT_OF_DIRECTORS];
-	_box_office = Film::box_office();
-	_rating = Film::rating();*/
+
+	//_director = poolOfDirectors[rand() % AMOUNT_OF_DIRECTORS];
+	//_box_office = Film::box_office();
+	//_rating = Film::rating();
 }
 
-/*
 
-
-
-void Film::assignCast()
+void Film::assignCast(Actor *poolOfActors)
 {
-	Act cast[6];
-	for (int i = 0; i < 6; i++)
-		cast[i] = poolOfActors[rand() % AMOUNT_OF_ACTORS];
+	//Actor * cast[5];
+	for (int i = 0; i < 5; i++)
+		cast[i] = &poolOfActors[rand() % 120];
 }
 
 double Film::box_office()
 {
-	return 100000000 * (cast[0].actFactor(); +
-					    cast[1].actFactor(); +
-					    cast[2].actFactor(); +
-					    cast[3].actFactor(); +
-						cast[4].actFactor(); +
-					    cast[5].actFactor(); +) * 10 + 0.1*_director.dirMultiplier();)
+	return 100000000 * (cast[0].actFactor() +
+					    cast[1].actFactor() +
+					    cast[2].actFactor() +
+					    cast[3].actFactor() +
+						cast[4].actFactor() +
+					    cast[5].actFactor() ) * (10 + 0.1*_director.dirMultiplier());
 }
-
+/*
 double Film::rating()
 {
-	return 5.0 + (_director.dirMultiplier(); * (cast[0].actFactor(); +
-											   cast[1].actFactor(); +
-											   cast[2].actFactor(); +
-											   cast[3].actFactor(); +
-											   cast[4].actFactor(); +
-											   cast[5].actFactor(); +))
+	return 5.0 + (_director.dirMultiplier() * (cast[0].actFactor() +
+											   cast[1].actFactor() +
+											   cast[2].actFactor() +
+											   cast[3].actFactor() +
+											   cast[4].actFactor() +
+											   cast[5].actFactor() ));
 }
 
 
