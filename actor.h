@@ -1,31 +1,29 @@
-#pragma once
-
 #include <string>
 #include <vector>
-#include <iterator>
 
 using namespace std;
 
-class Actor
+struct ratio
 {
-	static vector <string> firstName;
-	static vector <string> lastName;
+	double box_office, rating;
+};
 
-	static void init();
+class Act
+{
+	static vector <string> names;
 
-	string _name, _firstName, _lastName;
-	int _age;
-	int _amountOfFilms;
-	double _actFactor;
-	double globalBox_Office, globalRating;
+	string _name;
+	int age;
+	int amountOfFilms;
+	ratio globalBox_Office, globalRating;
 
 public:
-	Actor();
+	Act();
 
 	string name() { return _firstName + " " + _lastName; }
 	int age() { return _age; }
 	int amountOfFilms() { return _amountOfFilms; }
 	double actFactor() { return _actFactor; }
-	double box_office() { return globalBox_Office; }
-	double rating() { return globalRating; }
+	ratio box_office() { return globalBox_Office; }
+	ratio rating() { return globalRating; }
 };

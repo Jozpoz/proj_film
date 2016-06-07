@@ -1,30 +1,30 @@
-#pragma once
-
 #include <string>
 #include <vector>
-#include <iterator>
 
 using namespace std;
 
-class Director
+struct ratio
 {
-	static vector <string> firstNames;
-	static vector <string> lastNames;
-	static void init();
+	double box_office, rating;
+};
 
-	string firstName, lastName;
+class Dir
+{
+	static vector <string> names;
+
+	string name;
 	int _age;
 	int _amountOfFilms;
-	double _dirMultiplier;
-	double globalBox_Office, globalRating;
+	double _dirMultiplier
+	ratio globalBox_Office, globalRating;
 
 public:
-	Director();
+	Dir();
 
-	string name() { return firstName + " " + lastName; }
+	string name() { return _firstName + " " + _lastName; }
 	int age() { return _age; }
 	int amountOfFilms() { return _amountOfFilms; }
 	double dirMultiplier() { return _dirMultiplier; }
-	double box_office() { return globalBox_Office; }
-	double rating() { return globalRating; }
+	ratio box_office() { return globalBox_Office; }
+	ratio rating() { return globalRating; }
 };

@@ -2,35 +2,34 @@
 #include <stdlib.h>
 #include <fstream>
 
-vector <string> Director::firstNames;
-vector <string> Director::lastNames;
+vector <string> Dir::firstName;
+vector <string> Dir::lastName;
 
-
-void Director::init()
+void Dir::init()
 {
-	ifstream file1("firstDirectorName.dat");
-	copy(istream_iterator<string>(file1),
+	ifstream file("firstDirectorName.dat");
+	copy(istream_iterator<string>(file),
 		 istream_iterator<string>(),
-		 back_inserter(firstNames));
-	file1.close();
+		 back_inserter(firstName));
+	file.close();
 
-	ifstream file2("lastDirectorName.dat");
-	copy(istream_iterator<string>(file2),
+	ifstream file("lastDirectorName.dat");
+	copy(istream_iterator<string>(file),
 		 istream_iterator<string>(),
-		 back_inserter(lastNames));
-	file2.close();
+		 back_inserter(lastName));
+	file.close();
 }
 
-Director::Director()
+Dir::Dir()
 {
-	static int amountOfFirstNames = (init(), firstNames.size());
-	static int amountOfLastNames = (init(), lastNames.size());
+	static int amountOfFirstNames = (init(), firstName.size());
+	static int amountOfLastNames = (init(), lastName.size());
 
-	firstName = firstName[rand() % amountOfFirstNames];
-	lastName = lastName[rand() % amountOfLastNames];
-	_age = 21 + rand() % 49;
+	_firstName = firstName[rand() % amountOfFirstNames];
+	_lastName = lastName[rand() % amountOfLastNames];
+	_age = 21 + rand() % 49;										//wiek reżysera z zakresu 21-49 na początku symulacji
 	_amountOfFilms = 0; 
-	_dirMultiplier = 1;
-	globalBox_Office = 0;
+	_dirMultiplier = 1; 											//każdy reżyser zaczyna z zerowym dorobkiem i jednostkowym współczynnikiem
+	globalBoxOffice = 0;
 	globalRating = 0;
 }
