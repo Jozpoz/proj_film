@@ -36,7 +36,8 @@ class Film
 
 */
 public:
-	static void assignCast(Actor *poolOfActors); // { *Actor poolOfActors = pool; }
+	Actor& operator[](int);
+	void assignCast(Actor &poolOfActors);
 
 	Film();
 

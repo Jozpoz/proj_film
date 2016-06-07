@@ -68,22 +68,23 @@ Film::Film()
 }
 
 
-void Film::assignCast(Actor *poolOfActors)
+void Film::assignCast(Actor &poolOfActors)
 {
+	int AMOUNT_OF_ACTORS = 120;
 	//Actor * cast[5];
 	for (int i = 0; i < 5; i++)
-		cast[i] = &poolOfActors[rand() % 120];
+		cast[i] = poolOfActors[(rand() % AMOUNT_OF_ACTORS)];
 }
 
 double Film::box_office()
 {
-	return 0;/*
+	return 0; /*
 	return 100000000 * (cast[0].actFactor() +
 					    cast[1].actFactor() +
 					    cast[2].actFactor() +
 					    cast[3].actFactor() +
 						cast[4].actFactor() +
-					    cast[5].actFactor() ) * (10 + 0.1*_director.dirMultiplier());*/
+					    cast[5].actFactor() ) * (10 + 0.1*_director.dirMultiplier()); */
 }
 /*
 double Film::rating()
